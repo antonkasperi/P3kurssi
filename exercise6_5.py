@@ -16,10 +16,7 @@ for product in products:
     # kun löytyy, käytetään .split-komentoa ja tulostetaan pelkkä vuosiluku
     if query in product:
         codeyear = product.split("_")
-        print(codeyear[1])
+        print(f"Tilauksen vuosiluku: {codeyear[1]}")
 
         # ja kutsutaan break
         break
-    # jos mitään ei löydy:
-    else:
-        print("Haulla 0 tulosta.")
