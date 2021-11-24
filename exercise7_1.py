@@ -1,3 +1,4 @@
+# luodaan dict
 cafe = {
         "name": "Imaginary Cafe Oy",
         "website": "https://edu.frostbit.fi/sites/cafe/",
@@ -14,13 +15,23 @@ cafe = {
         }
     }
 
-address = cafe["location"]["address"]
-zip_code = cafe["location"]["zip_code"]
-city = cafe["location"]["city"]
-services = cafe["categories"]
-
+# tulostetaan pyydetyt tiedot
 print(cafe["name"])
-print(f"{address}\n{zip_code} {city}")
+print(f"{cafe['location']['address']}\n{cafe['location']['zip_code']} {cafe['location']['city']}")
 print()
-print(cafe["website"])
-print(f"Palvelut: {services[0:4]}")
+print(cafe['website'])
+
+# tässä kohtaa jouduin hieman googlailemaan kunnes löysin .join() metodin
+# jotta saan listan tulostettua f-stringin kanssa ja ilman hakasulkeita
+services = []
+for service in cafe['categories']:
+    services.append(service)
+
+separator = ", "
+print(f'Palvelut: {separator.join(services)}')
+
+# löytämäni esimerkin koodi näytti tältä, mutta yksinkertaistin sitä koska
+# rehellisesti sanottuna en ymmärrä miksi tuolla on for-toistolause :)
+# varmasti olisi myös tapa tehdä tämä suoraan cafe-dictistä ja ilman erillistä
+# "services"-listan luomista
+# print(f'Palvelut: {", ".join(str(x) for x in services)}')
