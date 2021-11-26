@@ -1,4 +1,4 @@
-import var_dump as vd
+# elokuvat
 movies = [
     {"name": "Komisario Palmun erehdys", "year": 1960},
     {"name": "Kauas pilvet karkaavat", "year": 1996},
@@ -8,21 +8,20 @@ movies = [
     {"name": "Milk", "year": 2008},
 ]
 
+# kaksi listaa
 new_movies = []
 old_movies = []
 
-#vd.var_dump(movies)
-
+# silmukoidaan ja lisätään elokuvat omiin listoihinsa
 for movie in movies:
-    for year in range(movie['year']):
-        if year < 2000:
-            old_movies.append(movie['name'])
-            break
+    year = movie['year']
+    if year < 2000:
+        old_movies.append(movie['name'])
 
-        elif year > 2000:
-            new_movies.append(movie['name'])
-            break
+    elif year > 2000:
+        new_movies.append(movie['name'])
 
+# ja tulostetaan silmukoilla
 print('Seuraavat elokuvat on julkaistu 2000-luvulla:')
 for movie in new_movies:
     print(movie)
