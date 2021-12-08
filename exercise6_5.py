@@ -10,13 +10,14 @@ products = ["T1565_2020", "T2432_2019",
 # pyydetään koodi str-muodossa
 query = input("Syötä tuotekoodi:\n")
 
-# haetaan silmukalla listasta
+# haetaan silmukalla listasta ja pilkotaan tuotekoodit ennen kuin vertaillaan :)
 for product in products:
+    parts = product.split("_")
+    code = parts[0]
+    year = parts[1]
 
-    # kun löytyy, käytetään .split-komentoa ja tulostetaan pelkkä vuosiluku
-    if query in product:
-        codeyear = product.split("_")
-        print(f"Tilauksen vuosiluku: {codeyear[1]}")
+    if query == code:
+        print(f"Tilauksen vuosiluku: {year}")
 
         # ja kutsutaan break
         break

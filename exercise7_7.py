@@ -8,4 +8,4 @@ raw_data = urllib.request.urlopen(req).read().decode("UTF-8")
 dontslip = json.loads(raw_data)
 
 #vd.var_dump(dontslip)
-Counter(dontslip)
+print(Counter(dontslip))

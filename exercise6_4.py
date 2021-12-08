@@ -11,23 +11,10 @@ products = ["T1565_2020", "T2432_2019",
 # tämä tarkoituksella str että voidaan hakea sitä käyttäen
 query = input("Minkä vuoden koodit haetaan?\n")
 
-# luodaan tyhjä lista tilauksille, joissa on oikea koodi
-matches = []
-
-# silmukoidaan koko products-lista läpi, haetaan tiettyä substringiä (query)
+# korjattu kuten pyysit!
 for order in products:
-    if query in order:
-        # jos löytyy, lisätään matches-listaan
-        matches.append(order)
-
-# toinen tyhjä lista, johon kerätään pelkät tuotekoodit
-printables = []
-
-# silmukoidaan ja .split alaviivan kohdalta, lisätään printattavat-listaan
-for stuff in matches:
-    stuff = stuff.split("_")
-    printables.append(stuff[0])
-
-# lopuksi tulostetaan tuotekoodit
-for p in printables:
-    print(p)
+    parts = order.split("_")
+    code = parts[0]
+    year = parts[1]
+    if year == query:
+        print(order)
