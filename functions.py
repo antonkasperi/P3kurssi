@@ -37,10 +37,14 @@ def magazine_serial_check(serial):
         return is_ISSN
 
 
-#def show_numbered_list(title, data):
-    #list_people = data.split(",")
-   # for person in list_people:
-
+def show_numbered_list(title, data):
+    print(title)
+    # the basic bit of printing the list with index numbers
+    # (starting from 1) after creating a variable for the index numbers
+    amount = len(data)
+    for index in range(amount):
+        p = data[index]
+        print(f"{index+1}. {p}")
 
 def box_volume(width, height, depth):
     boxvolume = width * height * depth
