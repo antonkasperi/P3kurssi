@@ -20,7 +20,8 @@ prices = [sub['price'] for sub in shopcart]
 totalprice = 0
 for sums in prices:
     totalprice = totalprice + sums
-vat = 0.24 * totalprice
+vat = totalprice - (totalprice / 1.24)
+vat = round(vat, 2)
 
 # tulostetaan
 print(f'Yhteensä {totalprice} €.')
