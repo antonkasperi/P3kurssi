@@ -22,5 +22,5 @@ for age in checktheages:
     if 0 <= age <= 125:
         print(Fore.GREEN + f"{age} vuotta, ikä OK!")
     elif age < 0 or age > 125:
-        print(Fore.RED + f"{age} vuotta, ikä ei oikeassa muodossa.")
+        print(Fore.RED + f"{age} vuotta, ikä ei ole oikeassa muodossa.")
 print(Style.RESET_ALL + "Valmis!")

@@ -10,7 +10,7 @@ draw.polygon(((131, 55), (444, 55), (300, 234)), fill=(255, 255, 255), outline=(
 draw.ellipse(((247, 75, 333, 161)), fill=(0, 0, 255), outline=(0, 0, 255))
 
 # adding Arial.Ttf and requesting user input
-fnt = ImageFont.truetype('C:/Users/anton/PycharmProjects/P3kurssi/Arial.Ttf', 10)
+fnt = ImageFont.truetype('Arial.Ttf', 10)
 d = ImageDraw.Draw(img)
 query = input("Anna teksti:\n")
 # adding the text
